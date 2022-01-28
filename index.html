@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Es Tu Derecho</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./static/css/config.css" />
+		<link rel="stylesheet" href="./static/css/inputs.css" />
+
+		<!-- Tailwind -->
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+		<header>
+			<img
+				style="min-width: max-content"
+				src="./static/img/hero.svg"
+				alt=""
+			/>
+		</header>
+		<main class="">
+			<!-- Primer bloque -->
+			<section>
+				<article class="flex flex-row">
+					<div class="basis-1/2">
+						<img src="./static/img/people-1.png" alt="Funny girl" />
+					</div>
+					<div
+						class="pt-[70px] basis-1/2 bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+					>
+						<p
+							style="font-size: 23px; letter-spacing: 1px"
+							class="bold-font text-center text-white"
+						>
+							LO JUSTO ES QUE SEAS ESCUCHADO.
+						</p>
+						<br />
+						<p
+							style="font-size: 21px; font-weight: 100"
+							class="text-white text-center"
+						>
+							Un equipo de abogados profesionales<br />
+							dispuestos a acompañarte en la resolución<br />
+							de los reclamos relacionados con el área de <br />
+							Defensa del Consumidor.
+						</p>
+					</div>
+				</article>
+				<article class="flex flex-row">
+					<div
+						style="
+							font-size: 22px;
+							align-items: center;
+							flex-direction: column;
+							justify-content: center;
+						"
+						class="flex basis-9/12"
+					>
+						<div>
+							<p class="text-[#2f2471]">
+								En Es Tu Derecho contamos con el conocimiento,
+								las relaciones institucionales<br />
+								y las herramientas tecnológicas para acompañarte
+								a resolver tu reclamo.
+								<br />
+								<br />
+								<br />
+							</p>
+
+							<p class="text-[#2f2471] bold-font">
+								Contactate con nosotros y encontrá la respuesta
+								inmediata que tanto buscaste.
+							</p>
+						</div>
+					</div>
+					<div style="justify-content: end" class="flex basis-3/12">
+						<img
+							class="w-11/12"
+							src="./static/img/people-2.jpg"
+							alt="Work meet"
+						/>
+					</div>
+				</article>
+			</section>
+			<!-- Segundo bloque -->
+			<section class="bg-[#2f2471] p-[90px]">
+				<p
+					style="font-size: 42px; letter-spacing: 0.5px"
+					class="bold-font"
+				>
+					COMPLETÁ SIN COSTO EL FORMULARIO CON LOS DATOS DE TU RECLAMO
+					Y TE RESPONDEREMOS A LA BREVEDAD
+				</p>
+				<form action="#" class="mx-auto">
+					<div>
+						<label
+							style="font-size: 42px"
+							class="block bold-font mt-[90px]"
+							>DATOS PERSONALES</label
+						>
+						<div class="flex mt-[20px]">
+							<input
+								class="input-left basis-1/2"
+								type="text"
+								placeholder="NOMBRE*"
+								required
+							/>
+							<input
+								class="input-right basis-1/2"
+								type="text"
+								placeholder="APELLIDO*"
+								required
+							/>
+						</div>
+						<div class="flex mt-[30px]">
+							<select
+								class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c] input-left basis-1/2"
+								name="document_type"
+								id=""
+							>
+								<option
+									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+									selected
+									value=""
+								>
+									TIPO DE DOCUMENTO*
+								</option>
+								<option
+									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+									value=""
+								>
+									DNI
+								</option>
+								<option
+									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+									value=""
+								>
+									PASAPORTE
+								</option>
+							</select>
+							<input
+								class="input-right basis-1/2"
+								type="number"
+								placeholder="NÚMERO DE DOCUMENTO"
+								required
+							/>
+						</div>
+						<p
+							style="font-size: 20px; letter-spacing: 0.6px"
+							class="mt-[20px]"
+						>
+							*Completá este dato según lo que figura en tu
+							documento
+						</p>
+					</div>
+					<div>
+						<label
+							style="font-size: 42px"
+							class="block bold-font mt-[45PX]"
+							>DATOS DE CONTACTO</label
+						>
+						<div class="flex mt-[20px]">
+							<input
+								class="input-left basis-1/2"
+								type="text"
+								placeholder="CORREO ELECTRONICO*"
+								required
+							/>
+						</div>
+						<label style="font-size: 20px" class="block mt-[45px]"
+							>TELEFONO</label
+						>
+						<div class="flex mt-[20px]">
+							<input
+								class="input-left basis-1/2"
+								type="text"
+								placeholder="PREFIJO*"
+								required
+							/>
+							<input
+								class="input-right basis-1/2"
+								type="text"
+								placeholder="NÚMERO*"
+								required
+							/>
+						</div>
+					</div>
+					<div style="justify-content: center" class="mt-[45px] flex">
+						<button
+							class="px-10 bg-gradient-to-r from-[#22c2ae] to-[#148f9c] bold-font button"
+						>
+							COMPLETAR FORMULARIO
+						</button>
+					</div>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>

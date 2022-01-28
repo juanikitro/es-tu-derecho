@@ -1,0 +1,26 @@
+.input-left {
+	margin-right: 15px;
+	height: 65px;
+	letter-spacing: 0.6px;
+	font-size: 24px;
+	padding: 20px;
+	border-radius: 0.7rem;
+	color: #9ca3ae;
+}
+
+.input-right {
+	margin-left: 15px;
+	height: 65px;
+	letter-spacing: 0.6px;
+	font-size: 20px;
+	padding: 20px;
+	border-radius: 0.7rem;
+	color: #9ca3ae;
+}
+
+.button {
+	height: 65px;
+	letter-spacing: 0.6px;
+	font-size: 20px;
+	border-radius: 0.7rem;
+}
