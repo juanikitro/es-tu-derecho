@@ -1,17 +1,21 @@
 @font-face {
 	font-family: regular-font;
+	font-display: swap;
 	src: url(../font/MADE-TOMMY-regular.otf);
 }
 @font-face {
 	font-family: bold-font;
+	font-display: swap;
 	src: url(../font/MADE-TOMMY-bold.otf);
 }
 @font-face {
 	font-family: black-font;
+	font-display: swap;
 	src: url(../font/MADE-TOMMY-black.otf);
 }
 @font-face {
 	font-family: extrabold-font;
+	font-display: swap;
 	src: url(../font/MADE-TOMMY-extrabold.otf);
 }
 
