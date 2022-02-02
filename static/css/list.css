@@ -1,0 +1,7 @@
+.image-ls:before {
+	content: url('../img/mini-wave.svg');
+	position: relative; /*or absolute*/
+	z-index: 100000;
+	left: -4px;
+	top: 2px;
+}
