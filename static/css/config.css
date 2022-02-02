@@ -32,3 +32,9 @@
 .black-font {
 	font-family: black-font;
 }
+
+.people-4 {
+	background-size: cover;
+	background-image: url(../img/people-4.webp);
+	background-position: center;
+}
