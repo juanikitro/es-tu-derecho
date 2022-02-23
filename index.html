@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="./static/css/config.css" />
 		<link rel="stylesheet" href="./static/css/inputs.css" />
 		<link rel="stylesheet" href="./static/css/list.css" />
+		<link rel="stylesheet" href="./static/css/extra.css" />
 
 		<!-- Tailwind -->
 		<script src="https://cdn.tailwindcss.com"></script>
@@ -59,20 +60,24 @@
 	<body>
 		<header>
 			<img
-				style="min-width: max-content"
+				style="object-fit: cover; height: 100vh; width: 100vw"
 				src="./static/img/hero.svg"
-				alt=""
+				alt="Es tu derecho"
 			/>
 		</header>
 		<main class="">
 			<!-- first block -->
 			<section>
-				<article class="flex flex-row">
+				<article class="md:flex d:flex-row">
 					<div class="basis-1/2">
-						<img src="./static/img/people-1.webp" alt="People-1" />
+						<img
+							style="object-fit: cover; height: 100%"
+							src="./static/img/people-1.webp"
+							alt="People-1"
+						/>
 					</div>
 					<div
-						class="pt-[70px] basis-1/2 bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+						class="px-[10px] py-[70px] basis-1/2 bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
 					>
 						<p
 							style="font-size: 23px; letter-spacing: 1px"
@@ -100,9 +105,11 @@
 							flex-direction: column;
 							justify-content: center;
 						"
-						class="flex basis-9/12"
+						class="flex md:basis-9/12"
 					>
-						<div>
+						<div
+							class="md:mx-0 mx-[10px] text-center py-[70px] md:py-0 md:text-left px-10 py-10"
+						>
 							<p class="text-[#2f2471]">
 								En Es Tu Derecho contamos con el conocimiento,
 								las relaciones institucionales<br />
@@ -118,96 +125,92 @@
 							</p>
 						</div>
 					</div>
-					<div style="justify-content: end" class="flex basis-3/12">
-						<img
-							class="w-11/12"
-							src="./static/img/people-2.webp"
-							alt="People-2"
-						/>
+					<div
+						style="justify-content: end"
+						class="hidden md:flex basis-4/12"
+					>
+						<img src="./static/img/people-2.webp" alt="People-2" />
 					</div>
 				</article>
 			</section>
 			<!-- second block -->
-			<section class="bg-[#2f2471] p-[90px]">
-				<p
-					style="font-size: 42px; letter-spacing: 0.5px"
-					class="bold-font"
-				>
+			<section class="bg-[#2f2471] py-[90px] px-[10px] md:px-[90px]">
+				<p style="letter-spacing: 0.5px" class="form-title bold-font">
 					COMPLETÁ SIN COSTO EL FORMULARIO CON LOS DATOS DE TU RECLAMO
 					Y TE RESPONDEREMOS A LA BREVEDAD
 				</p>
 				<form action="#" class="mx-auto">
 					<div>
-						<label
-							style="font-size: 42px"
-							class="block bold-font mt-[90px]"
+						<label class="form-title block bold-font mt-[90px]"
 							>DATOS PERSONALES</label
 						>
-						<div class="flex mt-[20px]">
+						<div class="sm:flex mt-[20px]">
 							<input
-								class="input-left basis-1/2"
+								class="inputs sm:basis-1/2 md:mr-[10px]"
 								type="text"
 								placeholder="NOMBRE*"
 								required
 							/>
 							<input
-								class="input-right basis-1/2"
+								class="inputs basis-1/2 mt-[30px] sm:mt-0 md:ml-[10px]"
 								type="text"
 								placeholder="APELLIDO*"
 								required
 							/>
 						</div>
-						<div class="flex mt-[30px]">
-							<select
-								class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c] input-left basis-1/2"
-								name="document_type"
-								id=""
-							>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									selected
-									disabled
-									value=""
+						<div class="sm:flex mt-[30px]">
+							<div class="custom-select basis-1/2 md:mr-[10px]">
+								<select
+									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c] inputs"
+									name="document_type"
+									id=""
 								>
-									TIPO DE DOCUMENTO*
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value=""
-								>
-									DNI
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value=""
-								>
-									PASAPORTE
-								</option>
-							</select>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										selected
+										disabled
+										value=""
+									>
+										TIPO DE DOCUMENTO*
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value=""
+									>
+										DNI
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value=""
+									>
+										PASAPORTE
+									</option>
+								</select>
+								<span class="custom-arrow"></span>
+							</div>
 							<input
-								class="input-right basis-1/2"
+								class="md:ml-[20px] mt-[30px] sm:mt-0 inputs basis-1/2"
 								type="number"
 								placeholder="NÚMERO DE DOCUMENTO"
 								required
 							/>
 						</div>
 						<p
-							style="font-size: 20px; letter-spacing: 0.6px"
-							class="mt-[20px]"
+							style="font-size: 18px; letter-spacing: 0.6px"
+							class="mt-[30px] text-center sm:text-left"
 						>
 							*Completá este dato según lo que figura en tu
 							documento
 						</p>
 					</div>
 					<div>
-						<label
-							style="font-size: 42px"
-							class="block bold-font mt-[45PX]"
+						<label class="form-title block bold-font mt-[45PX]"
 							>DATOS DE CONTACTO</label
 						>
 						<div class="flex mt-[20px]">
 							<input
-								class="input-left basis-1/2"
+								class="inputs"
+								style="width: 100%"
 								type="text"
 								placeholder="CORREO ELECTRONICO*"
 								required
@@ -216,15 +219,15 @@
 						<label style="font-size: 20px" class="block mt-[45px]"
 							>TELEFONO</label
 						>
-						<div class="flex mt-[20px]">
+						<div class="sm:flex mt-[20px]">
 							<input
-								class="input-left basis-1/2"
+								class="inputs basis-1/2 md:mr-[10px]"
 								type="text"
 								placeholder="PREFIJO*"
 								required
 							/>
 							<input
-								class="input-right basis-1/2"
+								class="mt-[30px] sm:mt-0 inputs basis-1/2 md:ml-[10px]"
 								type="text"
 								placeholder="NÚMERO*"
 								required
@@ -243,208 +246,190 @@
 					<div style="justify-content: center" class="mt-2 flex">
 						<img
 							width="50px"
+							style="max-width: 50px; min-width: 50px"
 							src="./static/img/arrows.svg"
 							alt="Arrows"
 							id="arrows"
 						/>
 					</div>
 					<div class="hidden extra-form-1">
-						<label
-							style="font-size: 42px"
-							class="block bold-font mt-[45px]"
+						<label class="form-title block bold-font mt-[45px]"
 							>DOMICILIO</label
 						>
-						<div class="flex mt-[20px]">
-							<select
-								class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c] input-left basis-1/2"
-								name="document_type"
-								id=""
+						<div class="md:flex mt-[20px]">
+							<input
+								class="inputs basis-1/2 md:mr-[10px]"
+								type="text"
+								placeholder="CIUDAD*"
+								required
+							/>
+							<div
+								class="custom-select basis-1/2 md:ml-[10px] mt-[30px] md:mt-0"
 							>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									selected
-									disabled
-									value=""
+								<select
+									class="sm:mt-0 text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c] inputs basis-1/2"
+									name="document_type"
+									id=""
 								>
-									CIUDAD*
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value=""
-								>
-									EJEMPLO 1
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value=""
-								>
-									EJEMPLO 2
-								</option>
-							</select>
-							<select
-								class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c] input-right basis-1/2"
-								name="document_type"
-								id=""
-							>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									selected
-									disabled
-									value=""
-								>
-									PROVINCIA*
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="BUENOS AIRES"
-								>
-									BUENOS AIRES
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CATAMARCA"
-								>
-									CATAMARCA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CHACO"
-								>
-									CHACO
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CHUBUT"
-								>
-									CHUBUT
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CIUDAD AUTONOMA DE BUENOS AIRES"
-								>
-									CIUDAD AUTONOMA DE BUENOS AIRES
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CORDOBA"
-								>
-									CORDOBA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CORRIENTES"
-								>
-									CORRIENTES
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="ENTRE RIOS"
-								>
-									ENTRE RIOS
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="FORMOSA"
-								>
-									FORMOSA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="JUJUY"
-								>
-									JUJUY
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="LA PAMPA"
-								>
-									LA PAMPA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="LA RIOJA"
-								>
-									LA RIOJA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="MENDOZA"
-								>
-									MENDOZA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="MISIONES"
-								>
-									MISIONES
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="NEUQUEN"
-								>
-									NEUQUEN
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="RIO NEGRO"
-								>
-									RIO NEGRO
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SALTA"
-								>
-									SALTA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SAN JUAN"
-								>
-									SAN JUAN
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SAN LUIS"
-								>
-									SAN LUIS
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SANTA CRUZ"
-								>
-									SANTA CRUZ
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SANTA FE"
-								>
-									SANTA FE
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SANTIAGO DEL ESTERO"
-								>
-									SANTIAGO DEL ESTERO
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="TIERRA DEL FUEGO"
-								>
-									TIERRA DEL FUEGO
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="TUCUMAN"
-								>
-									TUCUMAN
-								</option>
-							</select>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										selected
+										disabled
+										value=""
+									>
+										PROVINCIA*
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="BUENOS AIRES"
+									>
+										BUENOS AIRES
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CATAMARCA"
+									>
+										CATAMARCA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CHACO"
+									>
+										CHACO
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CHUBUT"
+									>
+										CHUBUT
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CIUDAD AUTONOMA DE BUENOS AIRES"
+									>
+										CIUDAD AUTONOMA DE BUENOS AIRES
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CORDOBA"
+									>
+										CORDOBA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CORRIENTES"
+									>
+										CORRIENTES
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="ENTRE RIOS"
+									>
+										ENTRE RIOS
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="FORMOSA"
+									>
+										FORMOSA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="JUJUY"
+									>
+										JUJUY
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="LA PAMPA"
+									>
+										LA PAMPA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="LA RIOJA"
+									>
+										LA RIOJA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="MENDOZA"
+									>
+										MENDOZA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="MISIONES"
+									>
+										MISIONES
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="NEUQUEN"
+									>
+										NEUQUEN
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="RIO NEGRO"
+									>
+										RIO NEGRO
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SALTA"
+									>
+										SALTA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SAN JUAN"
+									>
+										SAN JUAN
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SAN LUIS"
+									>
+										SAN LUIS
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SANTA CRUZ"
+									>
+										SANTA CRUZ
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SANTA FE"
+									>
+										SANTA FE
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SANTIAGO DEL ESTERO"
+									>
+										SANTIAGO DEL ESTERO
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="TIERRA DEL FUEGO"
+									>
+										TIERRA DEL FUEGO
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="TUCUMAN"
+									>
+										TUCUMAN
+									</option>
+								</select>
+								<span class="custom-arrow"></span>
+							</div>
 						</div>
 					</div>
 					<div class="hidden extra-form-2">
-						<label
-							style="font-size: 42px"
-							class="block bold-font mt-[45PX]"
+						<label class="form-title block bold-font mt-[45PX]"
 							>CONTANOS BREVEMENTE CUÁL FUE EL PROBLEMA</label
 						>
 						<div class="flex mt-[20px]">
@@ -453,20 +438,18 @@
 						</div>
 					</div>
 					<div class="hidden extra-form-3">
-						<label
-							style="font-size: 42px"
-							class="block bold-font mt-[45PX]"
+						<label class="form-title block bold-font mt-[45PX]"
 							>DATOS DEL PROVEEDOR</label
 						>
-						<div class="flex mt-[20px]">
+						<div class="md:flex mt-[20px]">
 							<input
-								class="input-left basis-1/2"
+								class="inputs basis-1/2 md:mr-[10px]"
 								type="text"
 								placeholder="NOMBRE DEL PROVEEDOR (EMPRESA O NEGOCIO)*"
 								required
 							/>
 							<input
-								class="input-right basis-1/2"
+								class="mt-[30px] sm:mt-0 inputs basis-1/2 md:ml-[10px]"
 								type="text"
 								placeholder="NÚMERO DE CUIT*"
 								required
@@ -474,10 +457,13 @@
 						</div>
 					</div>
 					<div class="hidden extra-form-4 mt-[45px]">
-						<label style="font-size: 42px" class="bold-font"
+						<label class="form-title block md:inline bold-font"
 							>¿COMO ESPERÁS QUE SE RESUELVA?</label
 						>
-						<p style="font-size: 18px" class="inline regular-font">
+						<p
+							style="font-size: 18px"
+							class="block text-center md:text-left md:inline regular-font"
+						>
 							(Carácter optativo)
 						</p>
 						<div class="flex mt-[20px]">
@@ -487,200 +473,194 @@
 					</div>
 					<div class="hidden extra-form-5 mt-[45px]">
 						<label
-							style="font-size: 42px"
-							class="bold-font mt-[90px]"
+							class="form-title block md:inline bold-font mt-[90px]"
 							>¿DÓNDE COMPRASTE EL PRODUCTO Y/O <br />
 							CONTRATASTE EL SERVICIO?</label
 						>
-						<p style="font-size: 18px" class="inline regular-font">
+						<p
+							style="font-size: 18px"
+							class="text-center md:text-left block md:inline regular-font"
+						>
 							(Carácter optativo)
 						</p>
-						<div class="flex mt-[20px]">
-							<select
-								class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c] input-left basis-1/2"
-								name="document_type"
-								id=""
+						<div class="sm:flex mt-[20px]">
+							<input
+								class="inputs basis-1/2 md:mr-[10px]"
+								type="text"
+								placeholder="CIUDAD*"
+								required
+							/>
+							<div
+								class="custom-select basis-1/2 md:ml-[10px] mt-[30px] md:mt-0"
 							>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									selected
-									disabled
-									value=""
+								<select
+									class="sm:mt-0 text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c] inputs basis-1/2"
+									name="document_type"
+									id=""
 								>
-									CIUDAD
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value=""
-								>
-									EJEMPLO 1
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value=""
-								>
-									EJEMPLO 2
-								</option>
-							</select>
-							<select
-								class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c] input-right basis-1/2"
-								name="document_type"
-								id=""
-							>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									selected
-									disabled
-									value=""
-								>
-									PROVINCIA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="BUENOS AIRES"
-								>
-									BUENOS AIRES
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CATAMARCA"
-								>
-									CATAMARCA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CHACO"
-								>
-									CHACO
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CHUBUT"
-								>
-									CHUBUT
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CIUDAD AUTONOMA DE BUENOS AIRES"
-								>
-									CIUDAD AUTONOMA DE BUENOS AIRES
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CORDOBA"
-								>
-									CORDOBA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="CORRIENTES"
-								>
-									CORRIENTES
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="ENTRE RIOS"
-								>
-									ENTRE RIOS
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="FORMOSA"
-								>
-									FORMOSA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="JUJUY"
-								>
-									JUJUY
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="LA PAMPA"
-								>
-									LA PAMPA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="LA RIOJA"
-								>
-									LA RIOJA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="MENDOZA"
-								>
-									MENDOZA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="MISIONES"
-								>
-									MISIONES
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="NEUQUEN"
-								>
-									NEUQUEN
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="RIO NEGRO"
-								>
-									RIO NEGRO
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SALTA"
-								>
-									SALTA
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SAN JUAN"
-								>
-									SAN JUAN
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SAN LUIS"
-								>
-									SAN LUIS
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SANTA CRUZ"
-								>
-									SANTA CRUZ
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SANTA FE"
-								>
-									SANTA FE
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="SANTIAGO DEL ESTERO"
-								>
-									SANTIAGO DEL ESTERO
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="TIERRA DEL FUEGO"
-								>
-									TIERRA DEL FUEGO
-								</option>
-								<option
-									class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
-									value="TUCUMAN"
-								>
-									TUCUMAN
-								</option>
-							</select>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										selected
+										disabled
+										value=""
+									>
+										PROVINCIA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="BUENOS AIRES"
+									>
+										BUENOS AIRES
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CATAMARCA"
+									>
+										CATAMARCA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CHACO"
+									>
+										CHACO
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CHUBUT"
+									>
+										CHUBUT
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CIUDAD AUTONOMA DE BUENOS AIRES"
+									>
+										CIUDAD AUTONOMA DE BUENOS AIRES
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CORDOBA"
+									>
+										CORDOBA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="CORRIENTES"
+									>
+										CORRIENTES
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="ENTRE RIOS"
+									>
+										ENTRE RIOS
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="FORMOSA"
+									>
+										FORMOSA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="JUJUY"
+									>
+										JUJUY
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="LA PAMPA"
+									>
+										LA PAMPA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="LA RIOJA"
+									>
+										LA RIOJA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="MENDOZA"
+									>
+										MENDOZA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="MISIONES"
+									>
+										MISIONES
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="NEUQUEN"
+									>
+										NEUQUEN
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="RIO NEGRO"
+									>
+										RIO NEGRO
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SALTA"
+									>
+										SALTA
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SAN JUAN"
+									>
+										SAN JUAN
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SAN LUIS"
+									>
+										SAN LUIS
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SANTA CRUZ"
+									>
+										SANTA CRUZ
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SANTA FE"
+									>
+										SANTA FE
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="SANTIAGO DEL ESTERO"
+									>
+										SANTIAGO DEL ESTERO
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="TIERRA DEL FUEGO"
+									>
+										TIERRA DEL FUEGO
+									</option>
+									<option
+										class="text-[#2e2471] bg-gradient-to-r from-[#22c2ae] to-[#148f9c]"
+										value="TUCUMAN"
+									>
+										TUCUMAN
+									</option>
+								</select>
+								<span class="custom-arrow"></span>
+							</div>
 						</div>
+						<button
+							type="submit"
+							style="width: 100%"
+							class="bold-font mx-[5px] mt-[40px] text-white bg-gradient-to-r from-[#22c2ae] to-[#148f9c] button"
+						>
+							ENVIAR
+						</button>
 					</div>
 				</form>
 			</section>
@@ -703,8 +683,8 @@
 					solucion satisfactoria
 				</p>
 				<div
-					style="justify-content: space-around"
-					class="mt-[45px] flex"
+					style="justify-content: space-around; align-items: center"
+					class="mt-[45px] flex sm:flex-row flex-col"
 				>
 					<img width="320px" src="./static/img/do-1.svg" alt="do-1" />
 					<img width="320px" src="./static/img/do-2.svg" alt="do-2" />
@@ -714,16 +694,26 @@
 			<!-- Fourth block -->
 			<section>
 				<img
+					class="hidden md:block"
 					style="width: 100vw"
 					src="./static/img/people-3.webp"
 					alt="Peopl-3"
 				/>
+				<img
+					class="md:hidden"
+					style="width: 100vw"
+					src="./static/img/people-3-mobile.webp"
+					alt="Peopl-3"
+				/>
 			</section>
 			<!-- fifth block  -->
-			<section style="flex-direction: row; height: 450px" class="flex">
+			<section
+				style="flex-direction: row; min-height: 450px"
+				class="flex"
+			>
 				<img
 					style="align-self: flex-start"
-					class="flex basis-3/12"
+					class="hidden md:flex basis-3/12"
 					src="./static/img/wave.svg"
 					alt="wave"
 				/>
@@ -733,7 +723,7 @@
 						font-size: 20px;
 						justify-content: center;
 					"
-					class="flex basis-6/12 px-5"
+					class="flex md:basis-6/12 px-5 py-10 md:py-0"
 				>
 					<p
 						style="font-size: 22px"
@@ -766,7 +756,7 @@
 				</div>
 				<img
 					style="transform: rotate(180deg); align-self: flex-end"
-					class="flex basis-3/12"
+					class="hidden md:flex basis-3/12"
 					src="./static/img/wave.svg"
 					alt="wave"
 				/>
@@ -776,7 +766,7 @@
 				<div class="people-4 w-4/12 flex basis-4/12"></div>
 				<div
 					style="flex-direction: column; font-size: 20px"
-					class="bg-[#2e2471] flex basis-8/12 py-[80px]"
+					class="hidden bg-[#2e2471] md:flex basis-8/12 py-[80px]"
 				>
 					<p
 						style="font-size: 22px"
@@ -863,14 +853,15 @@
 			<!-- Footer -->
 			<footer
 				style="min-height: 240px"
-				class="bg-gradient-to-r to-[#22c2ae] from-[#148f9c] flex px-[80px]"
+				class="bg-gradient-to-r to-[#22c2ae] from-[#148f9c] md:flex px-[80px] py-10"
 			>
 				<div
 					style="justify-content: center; align-items: center"
-					class="flex basis-1/4"
+					class="flex basis-1/4 my-10 md:my-0"
 				>
 					<img
 						width="50px"
+						style="max-width: 50px; min-width: 50px"
 						src="./static/img/fb.svg"
 						alt="Facebook"
 					/>
@@ -883,10 +874,11 @@
 				</div>
 				<div
 					style="justify-content: center; align-items: center"
-					class="flex basis-1/4"
+					class="flex basis-1/4 my-5 md:my-0"
 				>
 					<img
 						width="50px"
+						style="max-width: 50px; min-width: 50px"
 						src="./static/img/lin.svg"
 						alt="Linkedin"
 					/>
@@ -899,16 +891,17 @@
 				</div>
 				<div
 					style="justify-content: center; align-items: center"
-					class="flex basis-1/4"
+					class="flex basis-1/4 my-5 md:my-0"
 				>
 					<img
 						width="50px"
+						style="max-width: 50px; min-width: 50px"
 						src="./static/img/ins.svg"
 						alt="Instagram"
 					/>
 					<p
 						style="font-size: 20px; letter-spacing: 1.2px"
-						class="mx-5 bold-font"
+						class="mx-2 bold-font my-5 md:my-0"
 					>
 						@estuderecho
 					</p>

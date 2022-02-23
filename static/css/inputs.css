@@ -1,21 +1,12 @@
-.input-left {
-	margin-right: 10px;
+.inputs {
 	height: 65px;
+	width: 100%;
 	letter-spacing: 0.6px;
 	font-size: 20px;
-	padding: 20px;
+	padding: 10px;
 	border-radius: 0.7rem;
 	color: #9ca3ae;
-}
-
-.input-right {
-	margin-left: 10px;
-	height: 65px;
-	letter-spacing: 0.6px;
-	font-size: 20px;
-	padding: 20px;
-	border-radius: 0.7rem;
-	color: #9ca3ae;
+	margin: 0 10px;
 }
 
 .button {
@@ -23,10 +14,8 @@
 	letter-spacing: 0.6px;
 	font-size: 24px;
 	border-radius: 0.7rem;
-}
-
-select {
-	color: #2e2471;
+	margin: 0 10px;
+	width: 100%;
 }
 
 .textarea {
@@ -40,4 +29,92 @@ select {
 	height: 265px;
 	resize: none;
 	width: 100%;
+}
+
+select {
+	color: #2e2471;
+	appearance: none;
+}
+
+.custom-select {
+	position: relative;
+	width: 100%;
+}
+
+.custom-arrow {
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	background: #2e2471;
+	display: block;
+	height: 50%;
+	width: 8%;
+	border-radius: 0.7rem;
+	pointer-events: none;
+}
+
+.custom-arrow::before,
+.custom-arrow::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+
+	left: 20%;
+	top: 38%;
+	transform: translate();
+}
+
+.custom-arrow::before {
+	border-left: 0.6em solid transparent;
+	border-right: 0.6em solid transparent;
+	border-top: 0.6em solid #148f9c;
+}
+
+@media only screen and (min-width: 530px) {
+	.inputs {
+		font-size: 16px;
+		width: 100%;
+		margin: 0;
+	}
+	.button {
+		font-size: 16px;
+	}
+	.custom-arrow::before,
+	.custom-arrow::after {
+		left: 22%;
+		top: 38%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.custom-arrow::before,
+	.custom-arrow::after {
+		left: 17%;
+		top: 38%;
+	}
+
+	.custom-arrow {
+		width: 10%;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.custom-arrow::before,
+	.custom-arrow::after {
+		left: 26%;
+		top: 38%;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	.custom-arrow::before,
+	.custom-arrow::after {
+		left: 22%;
+		top: 38%;
+	}
+
+	.custom-arrow {
+		width: 6%;
+	}
 }
