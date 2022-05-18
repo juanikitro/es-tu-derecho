@@ -1,6 +1,6 @@
-# es-tu-derecho
+# Es tu derecho
 
-It is a simple landing page for an bussiness. 
+It is a simple landing page for a organization
 
 ## Link
 https://estuderecho.org/
